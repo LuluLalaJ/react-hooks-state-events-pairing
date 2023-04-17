@@ -21,7 +21,7 @@ function App() {
         title="Thinking in React"
       />
       <VideoInfo video={video}/>
-      <Votes />
+      <Votes video={video}/>
       <button onClick={toggleComments}>{commentsHidden ? "Show Comments" : "Hide Comments" }</button>
       {commentsHidden ?  null : <CommentsContainer />  }
       
