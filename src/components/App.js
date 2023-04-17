@@ -1,7 +1,14 @@
+import React, { useState } from "react";
 import video from "../data/video.js";
+import VideoInfo from "./VideoInfo.js";
+import Votes from "./Votes.js";
+import CommentsContainer from "./CommentsContainer.js";
 
 function App() {
-  console.log("Here's your data:", video);
+  const [commentsHidden, setCommentsHidden] = useState(false)
+  function toggleComments() {
+    setCommentsHidden(commentsHidden => !commentsHidden)
+  }
 
   return (
     <div className="App">
@@ -13,6 +20,11 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <VideoInfo />
+      <Votes />
+      <button onClick={toggleComments}>{commentsHidden ? "Show Comments" : "Hide Comments" }</button>
+      {commentsHidden ?  null : <CommentsContainer />  }
+      
     </div>
   );
 }
