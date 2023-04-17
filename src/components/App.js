@@ -20,7 +20,7 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
-      <VideoInfo />
+      <VideoInfo video={video}/>
       <Votes />
       <button onClick={toggleComments}>{commentsHidden ? "Show Comments" : "Hide Comments" }</button>
       {commentsHidden ?  null : <CommentsContainer />  }
