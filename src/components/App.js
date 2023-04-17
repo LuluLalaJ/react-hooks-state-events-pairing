@@ -23,7 +23,7 @@ function App() {
       <VideoInfo video={video}/>
       <Votes video={video}/>
       <button onClick={toggleComments}>{commentsHidden ? "Show Comments" : "Hide Comments" }</button>
-      {commentsHidden ?  null : <CommentsContainer />  }
+      {commentsHidden ?  null : <CommentsContainer comments={video.comments}/>  }
       
     </div>
   );

@@ -1,8 +1,11 @@
 import React from "react";
 
-function Comment() {
+function Comment({comment}) {
     return (
-        <div>Comment</div>
+        <div>
+            <h4>{comment.user}</h4>
+            <p>{comment.comment}</p>
+        </div>
     )
 }
 

@@ -14,8 +14,8 @@ function Votes({video}) {
 
     return (
         <div>
-           <button onClick={addVotes}>{upVotes} 👍</button>
-           <button onClick={minusVotes}>{downVotes} 👎</button>
+            <button onClick={addVotes}>{upVotes} 👍</button>
+            <button onClick={minusVotes}>{downVotes} 👎</button>
         </div>
         
     )
