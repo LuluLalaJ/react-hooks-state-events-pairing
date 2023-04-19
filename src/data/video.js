@@ -9,7 +9,7 @@ const video = {
   comments: [
     {
       id: 1,
-      user: "duanebot",
+      user: "wduanebot",
       comment: "first!",
     },
     {
