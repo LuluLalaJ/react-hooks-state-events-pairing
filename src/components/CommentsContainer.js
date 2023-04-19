@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Comment from "./Comment";
+import SortComment from 
 
 function CommentsContainer({comments}) {
     const [displayedComments, setDisplayedComments] = useState(comments)
@@ -14,12 +15,13 @@ function CommentsContainer({comments}) {
         const updatedComments = displayedComments.filter(comment => comment.id !== deletedId)
         setDisplayedComments(updatedComments)
     }
-    
+
     return (
         <div>
             <label> Search comments by username
                 <input onChange={(e)=>setSearch(e.target.value)} placeholder="type username" />
             </label>
+            <SortComment />
             {renderComments}
         </div>
     )
